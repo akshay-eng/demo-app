@@ -6,8 +6,10 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, date
 from bson import ObjectId
+from quest_fhir.hl7 import FHIRValidator
 
 app = FastAPI(title="Quest Diagnostics Lab API", version="1.0.0")
+fhir = FHIRValidator(mode="strict")
 
 app.add_middleware(
     CORSMiddleware,

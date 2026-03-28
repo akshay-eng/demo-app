@@ -6,10 +6,8 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, date
 from bson import ObjectId
-from quest_analytics.tracker import AnalyticsEngine
 
 app = FastAPI(title="Quest Diagnostics Lab API", version="1.0.0")
-analytics = AnalyticsEngine(service="quest-lab-api")
 
 app.add_middleware(
     CORSMiddleware,

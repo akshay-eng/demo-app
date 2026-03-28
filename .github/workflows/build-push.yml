@@ -71,7 +71,7 @@ jobs:
       - name: Checkout manifests repo
         uses: actions/checkout@v4
         with:
-          repository: ak3hay/quest-diagnostics-manifests
+          repository: akshay-eng/demo-app-manifests
           token: ${{ secrets.GH_PAT }}
 
       - name: Update image tags

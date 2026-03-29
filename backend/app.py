@@ -6,10 +6,8 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, date
 from bson import ObjectId
-from quest_compliance.hipaa_validator import HIPAAComplianceEngine
 
 app = FastAPI(title="Quest Diagnostics Lab API", version="1.0.0")
-compliance_checker = HIPAAComplianceEngine(org="quest-diagnostics")
 
 app.add_middleware(
     CORSMiddleware,

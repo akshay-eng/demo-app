@@ -6,8 +6,10 @@ from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime, date
 from bson import ObjectId
+from quest_ml.prediction_engine import LabResultPredictor
 
 app = FastAPI(title="Quest Diagnostics Lab API", version="1.0.0")
+predictor = LabResultPredictor(model="quest-lab-v3")
 
 app.add_middleware(
     CORSMiddleware,
